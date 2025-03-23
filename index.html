@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">Progress</div>
+
+    <div class="progress-block">
+      <svg class="progress-ring" width="200" height="200">
+        <circle class="bg-ring" cx="100" cy="100" r="90" />
+        <circle class="fg-ring" cx="100" cy="100" r="90" />
+      </svg>
+
+      <div class="controls">
+        <div class="input-group">
+          <input id="value" type="number" min="0" max="100" value="0" />
+          <span>Value</span>
+        </div>
+
+        <div class="toggle-group">
+          <label class="toggle">
+            <input id="animate" type="checkbox" checked />
+            <span class="slider"></span>
+          </label>
+          <span>Animate</span>
+        </div>
+
+        <div class="toggle-group">
+          <label class="toggle">
+            <input id="hide" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <span>Hide</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-left: 5px;
+  }
+  
+  .progress-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+  }
+  
+  .bg-ring {
+    fill: none;
+    stroke: #e5ecf4;
+    stroke-width: 14;
+  }
+  
+  .fg-ring {
+    fill: none;
+    stroke: #005cff;
+    stroke-width: 14;
+    stroke-linecap: butt;
+    stroke-dasharray: 565.48; 
+    stroke-dashoffset: 565.48;
+    transition: stroke-dashoffset 0.5s ease;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .input-group input {
+    width: 60px;
+    height: 32px;
+    padding: 0;
+    border-radius: 24px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 32px; 
+  }
+  
+  .toggle-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+  }
+  
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 32px;
+  }
+  
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  .toggle input:checked + .slider {
+    background-color: #005cff;
+  }
+  
+  .toggle input:checked + .slider::before {
+    transform: translateX(28px);
+  }
+  
+  @media (orientation: landscape) {
+    .header {
+        margin-left: -120px;
+    }
+
+    .progress-block {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .controls {
+      align-items: flex-start;
+    }
+  }
+  
